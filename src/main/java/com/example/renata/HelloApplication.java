@@ -16,7 +16,7 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("start-scene.fxml"));
         Scene scene = new Scene(fxmlLoader.load(),800,600);
         stage.setTitle("JavaFX учебник");
-        stage.getIcons().add(new Image("C:\\Users\\user\\IdeaProjects\\renata\\src\\main\\resources\\book.png"));
+        stage.getIcons().add(new Image(String.valueOf(getClass().getResource("book.png"))));
         stage.setScene(scene);
         stage.show();
 

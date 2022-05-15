@@ -28,7 +28,7 @@ public class ReadingSceneController implements Initializable {
     List<Image> pages;
     public void nextButtonOn(ActionEvent e){
         pageNum++;
-        if (pageNum <= 0 || pageNum >= 52){
+        if (pageNum<= 0 || pageNum >= 52){
             pageNum--;
             Alert alert = new Alert(javafx.scene.control.Alert.AlertType.ERROR);
             alert.setTitle("Ошибка");
@@ -77,7 +77,7 @@ public class ReadingSceneController implements Initializable {
     public void pageNumberInput(KeyEvent e){
         if (e.getCode().equals(KeyCode.ENTER)){
             pageNum = Integer.parseInt(pageNumberTextField.getText());
-            if (pageNum-1 <= 0 || pageNum-1 >= 52){
+            if (pageNum <= 0 || pageNum >= 52){
                 Alert alert = new Alert(javafx.scene.control.Alert.AlertType.ERROR);
                 alert.setTitle("Ошибка");
                 alert.setHeaderText("Ошибка ввода страницы");
@@ -101,7 +101,7 @@ public class ReadingSceneController implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        PDFtoJPGConverter jpgConverterTask = new PDFtoJPGConverter("src/main/resources/kursach_medvedus.pdf");
+        PDFtoJPGConverter jpgConverterTask = new PDFtoJPGConverter("src/main/resources/com/example/renata/kursach_medvedus.pdf");
         new Thread(jpgConverterTask).start();
         try {
             pages = jpgConverterTask.get();
