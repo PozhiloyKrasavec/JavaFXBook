@@ -14,7 +14,6 @@
         </content>
       </ScrollPane>
       <TextField fx:id="pageNumberTextField" alignment="CENTER" layoutX="385.0" layoutY="548.0" onKeyPressed="#pageNumberInput" prefHeight="26.0" prefWidth="32.0" />
-      <MenuButton layoutX="49.0" layoutY="548.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="240.0" text="Оглавление" fx:id="paragraphsMenu" />
       <Button layoutX="331.0" layoutY="548.0" mnemonicParsing="false" onAction="#backButtonOn" text="&lt;" />
       <Button layoutX="447.0" layoutY="548.0" mnemonicParsing="false" onAction="#nextButtonOn" text="&gt;" />
    </children>
