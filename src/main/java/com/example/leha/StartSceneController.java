@@ -1,7 +1,5 @@
-package com.example.renata;
+package com.example.leha;
 
-import javafx.application.Preloader;
-import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

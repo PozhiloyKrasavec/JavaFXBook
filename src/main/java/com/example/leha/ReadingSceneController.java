@@ -1,6 +1,6 @@
-package com.example.renata;
+package com.example.leha;
 
-import com.example.renata.Model.PDFtoJPGConverter;
+import com.example.leha.Model.PDFtoJPGConverter;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -14,8 +14,6 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.concurrent.ExecutionException;
@@ -102,7 +100,7 @@ public class ReadingSceneController implements Initializable {
                 background = new Background(backgroundImage);
                 anchorPane.setBackground(background);
                 scrollPane.setVvalue(scrollPane.getVmin());
-                pageNumberTextField.setText(String.valueOf(pageNum-1));
+                pageNumberTextField.setText(String.valueOf(pageNum));
             }
         }
     }

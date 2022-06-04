@@ -1,4 +1,4 @@
-package com.example.renata.Model;
+package com.example.leha.Model;
 
 import javafx.concurrent.Task;
 import javafx.scene.image.ImageView;
@@ -7,7 +7,6 @@ import javafx.scene.image.WritableImage;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.rendering.PDFRenderer;
 
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import javafx.scene.image.Image;
@@ -46,7 +45,7 @@ public class PDFtoJPGConverter extends Task<List<Image>> {
         {
             BufferedImage pdfImage =  renderer.renderImageWithDPI(i,96);
             imageList.add(convertToFxImage(pdfImage));
-            this.updateProgress(i,count);
+            //this.updateProgress(i,count);
 
         }
         return imageList;

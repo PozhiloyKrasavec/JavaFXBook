@@ -1,4 +1,4 @@
-package com.example.renata;
+package com.example.leha;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

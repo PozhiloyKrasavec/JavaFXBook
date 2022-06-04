@@ -6,7 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.renata.ReadingSceneController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.leha.ReadingSceneController">
    <children>
       <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" pannable="true" prefHeight="536.0" prefWidth="802.0" vbarPolicy="ALWAYS">
         <content>
