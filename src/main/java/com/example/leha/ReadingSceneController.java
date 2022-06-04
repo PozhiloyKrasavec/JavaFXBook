@@ -33,7 +33,7 @@ public class ReadingSceneController implements Initializable {
     List<Image> pages;
     public void nextButtonOn(ActionEvent e){
         pageNum++;
-        if (pageNum<= 1 || pageNum >= pages.size()){
+        if (pageNum< 1 || pageNum >= pages.size()){
             pageNum--;
             Alert alert = new Alert(javafx.scene.control.Alert.AlertType.ERROR);
             alert.setTitle("Ошибка");
@@ -44,7 +44,7 @@ public class ReadingSceneController implements Initializable {
             }
         }
         else {
-            backgroundImage = new BackgroundImage(pages.get(pageNum),
+            backgroundImage = new BackgroundImage(pages.get(pageNum-1),
                     BackgroundRepeat.NO_REPEAT,
                     BackgroundRepeat.NO_REPEAT,
                     BackgroundPosition.DEFAULT,
@@ -52,12 +52,12 @@ public class ReadingSceneController implements Initializable {
             background = new Background(backgroundImage);
             anchorPane.setBackground(background);
             scrollPane.setVvalue(scrollPane.getVmin());
-            pageNumberTextField.setText(String.valueOf(pageNum-1));
+            pageNumberTextField.setText(String.valueOf(pageNum));
         }
     }
     public void backButtonOn(ActionEvent e ){
         pageNum--;
-        if (pageNum <= 1 || pageNum>=pages.size()){
+        if (pageNum < 1 || pageNum>=pages.size()){
             pageNum++;
             Alert alert = new Alert(javafx.scene.control.Alert.AlertType.ERROR);
             alert.setTitle("Ошибка");
@@ -68,7 +68,7 @@ public class ReadingSceneController implements Initializable {
             }
         }
         else {
-            backgroundImage = new BackgroundImage(pages.get(pageNum),
+            backgroundImage = new BackgroundImage(pages.get(pageNum-1),
                     BackgroundRepeat.NO_REPEAT,
                     BackgroundRepeat.NO_REPEAT,
                     BackgroundPosition.DEFAULT,
@@ -76,13 +76,13 @@ public class ReadingSceneController implements Initializable {
             background = new Background(backgroundImage);
             anchorPane.setBackground(background);
             scrollPane.setVvalue(scrollPane.getVmin());
-            pageNumberTextField.setText(String.valueOf(pageNum-1));
+            pageNumberTextField.setText(String.valueOf(pageNum));
         }
     }
     public void pageNumberInput(KeyEvent e){
         if (e.getCode().equals(KeyCode.ENTER)){
             pageNum = Integer.parseInt(pageNumberTextField.getText());
-            if (pageNum <= 1 || pageNum >= pages.size()){
+            if (pageNum < 1 || pageNum >= pages.size()){
                 Alert alert = new Alert(javafx.scene.control.Alert.AlertType.ERROR);
                 alert.setTitle("Ошибка");
                 alert.setHeaderText("Ошибка ввода страницы");
@@ -92,7 +92,7 @@ public class ReadingSceneController implements Initializable {
                 }
             }
             else {
-                backgroundImage = new BackgroundImage(pages.get(pageNum),
+                backgroundImage = new BackgroundImage(pages.get(pageNum-1),
                         BackgroundRepeat.NO_REPEAT,
                         BackgroundRepeat.NO_REPEAT,
                         BackgroundPosition.DEFAULT,
